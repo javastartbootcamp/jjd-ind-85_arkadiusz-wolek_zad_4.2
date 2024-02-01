@@ -13,12 +13,15 @@ public class ToDoTask {
     }
 
     public ToDoTask(String name, String description, int priority) {
-        this(name, description);
+        this.name = name;
+        this.description = description;
         this.priority = priority;
     }
 
     public ToDoTask(String name, String description, int priority, Person person) {
-        this(name, description, priority);
+        this.name = name;
+        this.description = description;
+        this.priority = priority;
         this.person = person;
     }
 
