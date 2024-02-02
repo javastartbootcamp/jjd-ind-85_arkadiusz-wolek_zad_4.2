@@ -11,18 +11,14 @@ public class Person {
     }
 
     String getPersonName() {
-        boolean fNull = (this.firstName == null);
-        boolean lNull = (this.lastName == null);
-        if (fNull && lNull) {
+        if (this.firstName != null && this.lastName != null) {
+            return (this.firstName + " " + this.lastName);
+        } else if (this.firstName != null) {
+            return this.firstName;
+        } else if (this.lastName != null) {
+            return this.lastName;
+        } else {
             return null;
         }
-        if (!fNull) {
-            if (!lNull) {
-                return (this.firstName + " " + this.lastName);
-            } else {
-                return this.firstName;
-            }
-        }
-        return this.lastName;
     }
 }

@@ -39,24 +39,28 @@ public class ToDoTask {
 
     void showTaskPriority() {
         System.out.print("Zadanie " + this.name + " ma priorytet ");
-        String p = "średni";
-        if (this.lowPriority()) { p = "niski"; }
-        if (this.highPriority()) { p = "wysoki"; }
-        System.out.println(p);
+        String priority = "średni";
+        if (this.lowPriority()) {
+            priority = "niski";
+        }
+        if (this.highPriority()) {
+            priority = "wysoki";
+        }
+        System.out.println(priority);
     }
 
     void showInfo() {
         System.out.println("Nazwa zadania: " + this.name);
         System.out.println("Opis zadania: " + this.description);
-        String p;
+        String priority;
         if (this.lowPriority()) {
-            p = "niski";
+            priority = "niski";
         } else if (this.mediumPriority()) {
-            p = "średni";
+            priority = "średni";
         } else {
-            p = "wysoki";
+            priority = "wysoki";
         }
-        System.out.println("Priorytet: " + p);
+        System.out.println("Priorytet: " + priority);
         if (this.person != null) {
             String name = this.person.getPersonName();
             if (name != null) {
